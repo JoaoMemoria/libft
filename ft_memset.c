@@ -1,37 +1,27 @@
-#include <libft.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: joamacie <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/25 15:16:32 by joamacie          #+#    #+#             */
+/*   Updated: 2024/10/26 15:44:54 by joamacie         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-/*void *b: ponteiro para o bloco de memória que vai ser preenchido
-int c: Valor que vai entrar no byte do bloco de memoria - vai ser convertido para unsigned char
-size_t len: Numero de bytes a serem preenchidos
-*/
+#include "libft.h"
 
-void    *ft_memset(void *b, int c, size_t len)
+void	*ft_memset(void *s, int c, size_t n)
 {
-    unsigned char    *p;
+	unsigned char	*p;
 
-    p = (unsigned char *)b;
-    while (len > 0)
-    {
-        *p = (unsigned char)c;
-        p++;
-        len--;
-    }
-    return (b);
+	p = (unsigned char *)s;
+	while (n > 0)
+	{
+		*p = (unsigned char)c;
+		p++;
+		n--;
+	}
+	return (s);
 }
-/*
-#include <stdio.h>
-
-int main() {
-    char buffer[50];
-
-    // Preenche o buffer com o caractere 'A' por 10 bytes
-    ft_memset(buffer, 'A', 10);
-    
-    // Adiciona um terminador nulo ao final da string
-    buffer[10] = '\0';
-
-    printf("Buffer preenchido: %s\n", buffer); // Saída: Buffer preenchido: AAAAAAAAAA
-
-    return 0;
-}
-*/

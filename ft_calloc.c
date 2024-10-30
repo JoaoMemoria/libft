@@ -1,19 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: joamacie <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/25 13:13:47 by joamacie          #+#    #+#             */
+/*   Updated: 2024/10/26 18:03:37 by joamacie         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-/* 
-A função ft_calloc aloca memória para um array de 'count' elementos, 
-cada um com 'size' bytes. A memória alocada é inicializada com zero.
-*/
-void	*ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	void	*mem;   // armazenar o endereço da memória alocada.
-	size_t	total;  // total de bytes a serem alocados.
+	void	*mem;
+	size_t	total;
 
-	total = count * size; // Calcula o total de bytes necessários para a alocação.
-	mem = malloc(total);   // Aloca a memória total usando malloc.
-	if (!mem) // Verifica se a alocação de memória foi ou não bem-sucedida.
+	total = nmemb * size;
+	mem = malloc(total);
+	if (!mem)
 		return (NULL);
-
-	ft_bzero(mem, total); // Inicializa toda a memória alocada com zeros.
-	return (mem); // Retorna o ponteiro para a memória alocada e inicializada.
+	ft_bzero(mem, total);
+	return (mem);
 }

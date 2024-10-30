@@ -1,8 +1,14 @@
-/^ Para cada caractere na string s, aplica a função f,
-passando como parâmetros o índice de cada caractere em s
-e o endereço do próprio caractere.
-A função f pode modificar o caractere, se necessário.
-/*
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: joamacie <joamacie@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/28 14:26:30 by joamacie          #+#    #+#             */
+/*   Updated: 2024/10/29 18:53:34 by joamacie         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 

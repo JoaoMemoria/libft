@@ -1,18 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joamacie <joamacie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 14:25:19 by joamacie          #+#    #+#             */
-/*   Updated: 2024/10/28 14:56:09 by joamacie         ###   ########.fr       */
+/*   Created: 2024/10/29 15:12:11 by joamacie          #+#    #+#             */
+/*   Updated: 2024/10/29 15:22:31 by joamacie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	write(fd, &c, 1);
+	size_t	len;
+	char	*rtn;
+
+	if (!s1 || !set)
+		return (0);
+	while (ft_strchr(set, *s1) && *s1 != '\0')
+		s1++;
+	if (*s1 == '\0')
+		return (ft_strdup(""));
+	len = ft_strlen(s1);
+	while (ft_strchr(set, s1[len]))
+		len--;
+	rtn = ft_substr(s1, 0, len + 1);
+	return (rtn);
 }

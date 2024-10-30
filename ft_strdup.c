@@ -1,18 +1,27 @@
-#include <libft.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: joamacie <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/25 13:50:57 by joamacie          #+#    #+#             */
+/*   Updated: 2024/10/25 13:56:35 by joamacie         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-/* STRDUP duplica a string s1 e retorna um ponteiro para a nova string. 
-A nova string é alocada dinamicamente e deve ser liberada pelo chamador.
-*/
-char		*ft_strdup(const char *s1)
+#include "libft.h"
+
+char	*ft_strdup(const char *s1)
 {
 	char	*str;
 	size_t	i;
 
 	i = 0;
-	str = (char *)malloc(sizeof(char) * ft_strlen(s1) + 1); /* Aloca memória suficiente para a nova string: O tamanho da string original (obtido com ft_strlen) + 1 para o caractere nulo. */
-	if (str == NULL) // Verifica se a alocação de memória foi ou não bem-sucedida.
-		return (NULL); // Retorna NULL se a alocação falhar.
-		while (s1[i])
+	str = (char *)malloc(sizeof(char) * ft_strlen(s1) + 1);
+	if (str == NULL)
+		return (NULL);
+	while (s1[i])
 	{
 		str[i] = s1[i];
 		i++;

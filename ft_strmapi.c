@@ -1,7 +1,14 @@
-/* Esta função aplica f a cada caractere da string s, 
-passando o índice como primeiro argumento e o próprio caractere como segundo argumento.
-Ela cria uma nova string (usando malloc) para armazenar os resultados das aplicações sucessivas de f em cada caractere de s.
-*/
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: joamacie <joamacie@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/28 14:27:39 by joamacie          #+#    #+#             */
+/*   Updated: 2024/10/28 14:59:22 by joamacie         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
