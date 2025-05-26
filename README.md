@@ -129,10 +129,3 @@ If you would like to contribute code to the project, please follow these steps:
    ```bash
    git push origin your-branch-name
    ```
-7. **Open a pull request** on the main repository. Provide a detailed description of your changes and why they are needed.
-
-We will review your pull request as soon as possible. Thank you for your contributions!
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
